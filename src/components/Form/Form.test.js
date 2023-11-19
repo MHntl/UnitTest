@@ -4,7 +4,7 @@
 //ilk olarak test edilecek dosyayı çağır
 import Form from ".";
 //render, screen ve fireEvent komutunu çağır
-import { render, screen, fireEvent, getByText } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 //user-event library den kurdugumuz userEvent Çağrılır
 import userEvent from "@testing-library/user-event";
 
@@ -20,6 +20,7 @@ test("Form: Click-Test işlemi Yapılıyor", async () => {
   //test edilecek bileşen değişkene atanır
   // atama işlemi 3 şikilde olur
   //1. idsine göre 2. rolune göre 3.içindeki yazıya göre
+  // data-testid=""
   const orderButton = screen.getByRole("button");
   const checkBox = screen.getByRole("checkbox");
 
